@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jovanliem — portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-indicator">
+    <div class="si-section-label" id="si-label">HOME</div>
+    <div class="si-track"><div class="si-fill" id="si-fill"></div></div>
+    <div class="si-dot"></div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-logo">JL</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-socials">
+      <a href="https://www.linkedin.com/in/jovan-liem-b95630330/" target="_blank" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/jovan9744-tech" target="_blank" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://instagram.com/jovanliem" target="_blank" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div id="globalParticles"></div>
+
+  <section id="home" class="hero">
+    <div class="hero-center">
+
+      <div class="hero-layout">
+
+        <div class="hero-left">
+          <div class="avatar-wrap">
+            <img class="avatar-img" id="hero-avatar" src="images/jovan.jpeg" alt="Jovan Liem"/>
+          </div>
+
+        </div>
+
+        <div class="hero-right">
+          <span class="hero-eyebrow">Information Systems · BINUS University</span>
+          <h1 class="hero-headline">Liem,<br/>Jovan Prasetiyo</h1>
+          <div class="hero-tagline-wrap">
+            <span class="hero-tagline-prefix">A lifetime&nbsp;</span>
+            <span class="hero-tagline-animated" id="heroTagline"></span><span class="hero-tagline-cursor">|</span>
+          </div>
+          <div class="hero-sub-tags">
+            <span>Community Leader</span>
+            <span>Servant</span>
+            <span>Biker</span>
+          </div>
+          <a href="#contact" class="hero-cta">Connect With Me</a>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll-cue">
+        <span class="scroll-cue-label">Scroll</span>
+        <div class="scroll-cue-line"><div class="scroll-cue-dot"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-left">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-right">
+        <p class="about-body">I'm an Information Systems student at Binus University Semarang, drawn to building things that actually solve real problems. Outside class, I lead a youth community of 120+ and that's where I've learned the most about how people and organizations truly work.</p>
+        <p class="about-body">I adapt fast and I'm never too proud to start from zero. Every project I take on is a chance to make something that actually matters.</p>
+        <div class="about-meta-row">
+          <div class="about-meta-item">
+            <span class="meta-num" data-count="4" data-suffix="th">4th</span>
+            <span class="meta-label">Semester</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="meta-num" data-count="3" data-suffix=" Years">3 Years</span>
+            <span class="meta-label">Leadership Experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag">Organization & Ministry</span>
+        <h2>Where I've<br/>been involved</h2>
+      </div>
+      <div class="exp-list">
+
+        <!-- Youth Leader -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2026 — Present</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>Youth Leader</h3>
+                <span class="exp-org">GBI Gajahmada Semarang</span>
+              </div>
+              <p>Growing a community of 120+ means nothing if people don't feel it matters. I set the vision, aligned 10 ministry teams around it, and made sure every program had a real reason to exist not just a date on the calendar.</p>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/YL.jpeg" alt="Youth Leader"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/youthcamp.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/YL2.jpeg" alt="Youth Leader"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/youthcamp.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <!-- Tambah slide baru di sini: duplikat blok lead-slide di atas, ganti src -->
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rock Charge -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2024 — Present</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>"ROCK CHARGE" Cell Group Leader</h3>
+                <span class="exp-org">GBI Gajahmada Semarang</span>
+              </div>
+              <p>Teenagers don't always have someone who genuinely checks on them. Every Friday night, I lead 15 teenagers through worship, discussion, and real conversations and beyond the meetings, I pray for them, stand with them when they're struggling, and make sure none of them drift without someone noticing.</p>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/RC.jpeg" alt="Youth Leader"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/RC.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/RC2.jpeg" alt="Youth Leader"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/RC2.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/RC3.jpeg" alt="Youth Leader"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/RC3.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <!-- Tambah slide baru di sini: duplikat blok lead-slide di atas, ganti src -->
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multimedia Ministry -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2019 — Present</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>Multimedia Ministry</h3>
+                <span class="exp-org">GBI Gajahmada Semarang</span>
+              </div>
+              <p> I operate camera, lighting, and both video and lighting mixers every week making sure the technical side never gets in the way of what matters.</p>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/multimedia.jpeg" alt="Multimedia Ministry"/>
+                  <div class="slide-overlay">
+                    <button class="slide-dl-btn" data-src="images/multimedia.jpeg" title="Download">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <!-- Tambah slide baru di sini: duplikat blok lead-slide di atas, ganti src -->
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & LEADERSHIP (redesigned) -->
+  <section id="education" class="edu-section">
+    <div class="container">
+
+      <!-- TAB SWITCHER -->
+      <div class="edu-tabs">
+        <button class="edu-tab active" data-tab="education">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Education
+        </button>
+        <button class="edu-tab" data-tab="leadership">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Experience
+        </button>
+      </div>
+
+      <!-- EDUCATION PANEL -->
+      <div class="edu-panel active" id="panel-education">
+
+        <!-- University -->
+        <div class="edu-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-card-left">
+              <span class="edu-badge">2024 — EXPECTED 2028</span>
+              <h3>Information Systems</h3>
+              <p class="edu-school-name">Binus University Semarang</p>
+            </div>
+            <div class="edu-card-gpa">
+              <span class="gpa-num">3.93</span>
+              <span class="gpa-label">GPA</span>
+            </div>
+          </div>
+
+          <!-- Skill pills -->
+          <div class="edu-skills">
+            <span>Data Analytics</span><span>UI/UX Design</span><span>Python</span><span>Figma</span><span>Tableau</span><span>Power BI</span>
+          </div>
+
+          <!-- Dean's List achievement -->
+          <div class="edu-deanlist">
+            <span class="edu-deanlist-badge">Dean's List 2025</span>
+            <span class="edu-deanlist-detail">Top Academic Performers</span>
+            <span class="edu-deanlist-link" onclick="lbOpen([{src:'images/DEANLIST.png', downloadSrc:'images/DEANLIST.png'}], 0)" role="button">View Certificate ↗</span>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="edu-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-card-left">
+              <span class="edu-badge">2024</span>
+              <h3>High School Diploma</h3>
+              <p class="edu-school-name">Krista Mitra High School Semarang</p>
+            </div>
+            <div class="edu-card-gpa">
+              <span class="gpa-num">90.1</span>
+              <span class="gpa-label">Avg Score</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LEADERSHIP PANEL -->
+      <div class="edu-panel" id="panel-leadership">
+
+        <!-- Youthcamp STANDFIRM -->
+        <div class="lead-acc reveal" data-acc>
+          <div class="lead-acc-header">
+            <div class="lead-acc-meta">
+              <span class="lead-acc-year">2026</span>
+              <div>
+                <p class="lead-acc-title">Youth Camp "STANDFIRM" Project Leader</p>
+                <p class="lead-acc-org">GBI Gajahmada Semarang</p>
+              </div>
+            </div>
+            <button class="lead-acc-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div class="lead-acc-body">
+            <div class="lead-acc-body-inner">
+            <p class="lead-acc-desc"> I led the full planning of the camp. Setting the theme, supervising 5 committees, coordinating venue, speakers, and transport, all so that every moment pointed toward one thing: that each person left genuinely changed, not just entertained.</p>
+            <div class="lead-gallery" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/youthcamp.jpeg" alt="Freshmen Partner"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/youthcamp.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/youthcamp.jpeg" alt="Freshmen Partner 2"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/youthcamp.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next">›</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freshmen Partner -->
+        <div class="lead-acc reveal" data-acc>
+          <div class="lead-acc-header">
+            <div class="lead-acc-meta">
+              <span class="lead-acc-year">2025–26</span>
+              <div>
+                <p class="lead-acc-title">Freshmen Partner</p>
+                <p class="lead-acc-org">BINUS University</p>
+              </div>
+            </div>
+            <button class="lead-acc-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div class="lead-acc-body">
+            <div class="lead-acc-body-inner">
+            <p class="lead-acc-desc">Starting university is overwhelming, and most people just push through it alone. Once a week for a year, I sat down with 5 new students, listened to what they were struggling with, and helped them find their footing until they didn't need to worry anymore.</p>
+            <div class="lead-gallery" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/FP.jpeg" alt="Freshmen Partner"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/FP.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/FP2.jpeg" alt="Freshmen Partner 2"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/FP2.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next">›</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freshmen Leader -->
+        <div class="lead-acc reveal" data-acc>
+          <div class="lead-acc-header">
+            <div class="lead-acc-meta">
+              <span class="lead-acc-year">2025</span>
+              <div>
+                <p class="lead-acc-title">Freshmen Leader</p>
+                <p class="lead-acc-org">BINUS University</p>
+              </div>
+            </div>
+            <button class="lead-acc-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div class="lead-acc-body">
+            <div class="lead-acc-body-inner">
+            <p class="lead-acc-desc">Thirty strangers walked into orientation. A month later, they felt like family. I co-led the group through sessions and daily guidance not just explaining university life, but making sure they actually enjoyed starting it.</p>
+            <div class="lead-gallery" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/FL.jpeg" alt="Freshmen Leader"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/FL.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/FL2.jpeg" alt="Freshmen Leader 2"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/FL2.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next">›</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Science Mentoring -->
+        <div class="lead-acc reveal" data-acc>
+          <div class="lead-acc-header">
+            <div class="lead-acc-meta">
+              <span class="lead-acc-year">2023</span>
+              <div>
+                <p class="lead-acc-title">Science Mentoring for JHS</p>
+                <p class="lead-acc-org">Krista Mitra Semarang</p>
+              </div>
+            </div>
+            <button class="lead-acc-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div class="lead-acc-body">
+            <div class="lead-acc-body-inner">
+            <p class="lead-acc-desc">Every Wednesday, I tutored 3 junior high students in Science just showing up consistently and helping them work through whatever they were stuck on.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="certifications" class="cert-section">
+    <div class="container">
+
+      <span class="label-tag">CREDENTIALS</span>
+      <h2>Certifications &<br/>Achievements</h2>
+
+      <div class="cert-exp-list">
+
+        <!-- Azure AI-900 -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2026</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>Microsoft Azure AI Fundamentals</h3>
+                <span class="exp-org">Microsoft · AI-900</span>
+              </div>
+              <p class="exp-desc">Took the AI-900 on my own went through Microsoft's materials, learned how machine learning and AI services actually work under the hood, and got certified.</p>
+              <a href="https://www.credly.com/badges/15776f09-70bd-448a-9275-eaf1ab376f47/public_url" target="_blank" class="cert-exp-link">View Credential ↗</a>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/microsoft-certified-azure-ai-fundamentals (1).png" alt="Azure AI-900"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/microsoft-certified-azure-ai-fundamentals (1).png" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Analytics 4 -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2026</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>Google Analytics 4</h3>
+                <span class="exp-org">Google · Digital Analytics</span>
+              </div>
+              <p class="exp-desc"> I picked up GA4 because I wanted analytics to be a baseline skill, not a gap learned how to track user behavior, interpret events, and turn numbers into something actually useful.</p>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/GA4.jpeg" alt="Google Analytics 4"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/GA4.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glowmention — slider -->
+        <div class="exp-item reveal">
+          <div class="exp-left"><span class="exp-period">2025</span></div>
+          <div class="exp-right exp-right--with-img">
+            <div class="exp-text-block">
+              <div class="exp-top">
+                <h3>Finalist — Glowmention Smart City</h3>
+                <span class="exp-org">Competition · Smart City Category</span>
+              </div>
+              <p class="exp-desc">Grand Maerakaca, one of Semarang's oldest cultural parks, was fading while the city kept growing and I wanted to help fix that. Competing against 28 teams from universities across Indonesia, my team went through three rounds of research, written papers, and a live site pitch to propose a tech-driven revitalization strategy for the park. We reached the Finalist stage, and our proposal was submitted to Disporapar Jawa Tengah for real-world follow-up.</p>
+              <div class="cert-exp-links">
+                <a href="https://bit.ly/3RPPyyK" target="_blank" class="cert-exp-link">Pitchdeck ↗</a>
+              </div>
+            </div>
+            <div class="lead-slider exp-img-block" data-slider>
+              <div class="lead-slides">
+                <div class="lead-slide">
+                  <img src="images/GLOWMENTION.jpeg" alt="Glowmention 1"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/GLOWMENTION.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/glow1.jpeg" alt="Glowmention 2"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/glow1.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/glow2.jpeg" alt="Glowmention 3"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/glow2.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+                <div class="lead-slide">
+                  <img src="images/glow3.jpeg" alt="Glowmention 4"/>
+                  <div class="slide-overlay"><button class="slide-dl-btn" data-src="images/glow3.jpeg" title="Download"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous">‹</button>
+                <div class="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="projects-header">
+        <span class="label-tag">Projects</span>
+        <h2>Things I've<br/>built</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="proj-card proj-card--featured reveal">
+          <!-- Left: story -->
+          <div class="proj-featured-left">
+            <span class="proj-featured-label">Featured Project</span>
+            <h3>Youth Community Attendance Tracker</h3>
+            <div class="proj-stack">
+              <span>Python</span><span>Flask</span><span>SQLite</span><span>JavaScript</span>
+            </div>
+          </div>
+          <!-- Right: description + link -->
+          <div class="proj-featured-right">
+            <span class="proj-tag">Web App · 2026</span>
+            <p>When my Youth Advisor asked whether our attendance was growing or declining, I had no answer. So I built one a web-based attendance tracker with a real-time dashboard and data visualization. Now instead of guessing, we can actually see the patterns, catch problems early, and make decisions based on real data.</p>
+            <a href="https://github.com/jovan9744-tech/Youth-Community-Attendance-Tracker" target="_blank" class="proj-github-link">View on GitHub ↗</a>
+          </div>
+        </div>
+        <div class="proj-card proj-card--featured reveal">
+          <div class="proj-featured-left">
+            <span class="proj-featured-label">UI/UX Project</span>
+            <h3>VisionSpace</h3>
+            <div class="proj-stack">
+              <span>Figma</span><span>UI/UX</span><span>Prototyping</span><span>AR</span>
+            </div>
+          </div>
+          <div class="proj-featured-right">
+            <span class="proj-tag">Mobile App · 2024</span>
+            <p>Nobody should wonder if their furniture fits but that's exactly what happens every time. I led a team to design VisionSpace, a concept mobile app that measures furniture through your phone camera, visualizes it in real-time AR, and connects you to contractors when you're ready. I drove every screen and flow from sketch to high-fidelity prototype in Figma.</p>
+            <div class="proj-links">
+              <a href="https://www.figma.com/proto/534YEA2VXJ0TpuPB6hSvuW/VisionSpace?node-id=1-2&t=jX7BVg9HhtaVaATI-1" target="_blank" class="proj-github-link">View Prototype ↗</a>
+              <a href="https://www.figma.com/design/534YEA2VXJ0TpuPB6hSvuW/VisionSpace?node-id=1-2&p=f" target="_blank" class="proj-github-link proj-github-link--secondary">Open in Figma ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <span class="proj-tag">Portfolio · 2026</span>
+            <span class="proj-arrow">↗</span>
+          </div>
+          <h3>This Website</h3>
+          <p>My simple personal portfolio web.</p>
+          <div class="proj-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-inner">
+      <div class="contact-left">
+        <span class="label-tag">Get In Touch</span>
+        <h2>My Contact</h2>
+        
+        <a href="mailto:jovan9744@gmail.com" class="contact-email">jovan9744@gmail.com</a>
+      </div>
+      <div class="contact-right">
+        <a href="https://www.linkedin.com/in/jovan-liem-b95630330/" target="_blank" class="contact-link"><span class="contact-link-inner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</span><span>↗</span></a>
+        <a href="https://github.com/jovan9744-tech" target="_blank" class="contact-link"><span class="contact-link-inner"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</span><span>↗</span></a>
+        <a href="https://instagram.com/jovanliem" target="_blank" class="contact-link"><span class="contact-link-inner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</span><span>↗</span></a>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">jovanliem</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-view-label" id="cursorViewLabel">VIEW</div>
+  <script src="script.js"></script>
+</body>
+</html>
