@@ -1128,7 +1128,7 @@ footer span:last-child { font-size: 0.72rem; color: #3A3836; }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 .edu-badge {
   font-size: 0.68rem;
@@ -1157,7 +1157,7 @@ footer span:last-child { font-size: 0.72rem; color: #3A3836; }
   color: var(--text-muted);
 }
 .edu-card-gpa {
-  text-align: right;
+  text-align: left;
   flex-shrink: 0;
 }
 .gpa-num {
@@ -1179,7 +1179,7 @@ footer span:last-child { font-size: 0.72rem; color: #3A3836; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 .edu-skills span {
   font-size: 0.72rem;
@@ -3075,19 +3075,9 @@ html::before {
   /* Hide text nav links */
   .nav-links { display: none !important; }
 
-  /* Show logo on left */
+  /* Hide logo on mobile */
   .nav-logo {
-    display: flex !important;
-    width: 32px !important;
-    height: 32px !important;
-    border-radius: 50% !important;
-    background: var(--text) !important;
-    color: var(--bg) !important;
-    font-size: 0.65rem !important;
-    font-weight: 700 !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
+    display: none !important;
   }
 
   /* Show social icons on right */
