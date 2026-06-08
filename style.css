@@ -3047,3 +3047,72 @@ html::before {
     margin: 0 auto !important;
   }
 }
+
+/* ════════════════════════════════════════
+   MOBILE NAVBAR — icon-only style
+════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* Replace pill navbar with minimal top bar */
+  #navbar {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 1.25rem !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    background: rgba(10,10,15,0.92) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+
+  /* Hide text nav links */
+  .nav-links { display: none !important; }
+
+  /* Show logo on left */
+  .nav-logo {
+    display: flex !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background: var(--text) !important;
+    color: var(--bg) !important;
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Show social icons on right */
+  .nav-socials {
+    display: flex !important;
+    gap: 0.85rem !important;
+    align-items: center !important;
+  }
+  .nav-socials a {
+    color: var(--text-muted) !important;
+    display: flex !important;
+  }
+  .nav-socials a svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* Hero padding adjust for full-width navbar */
+  .hero {
+    padding-top: 5rem !important;
+  }
+
+  /* Hero eyebrow 2 lines */
+  .hero-eyebrow {
+    line-height: 1.5 !important;
+    text-align: left !important;
+  }
+}
