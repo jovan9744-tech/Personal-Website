@@ -2935,3 +2935,115 @@ html::before {
     padding: 0.65rem 1rem !important;
   }
 }
+
+
+/* ════════════════════════════════════════
+   MOBILE FIX v2 — navbar + cert font size
+════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+
+  /* NAVBAR — fit all items in one line */
+  #navbar {
+    top: 0.6rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 1.5rem) !important;
+    max-width: 100% !important;
+    padding: 0.45rem 0.6rem !important;
+    border-radius: 999px !important;
+    gap: 0 !important;
+  }
+  .nav-logo { display: none !important; }
+  .nav-socials { display: none !important; }
+  .nav-links {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+  }
+  .nav-links a {
+    font-size: 0.5rem !important;
+    padding: 0.25rem 0.3rem !important;
+    letter-spacing: 0.04em !important;
+    white-space: nowrap !important;
+  }
+
+  /* CERT SECTION — smaller heading */
+  .cert-section h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+  }
+  .cert-section .exp-item {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .cert-section h3 {
+    font-size: 1rem !important;
+  }
+
+  /* HERO PROFILE BORDER — fix running shine */
+  .avatar-img {
+    border: 2px solid rgba(120, 80, 255, 0.4) !important;
+    box-shadow:
+      0 0 0 6px rgba(120, 80, 255, 0.07),
+      0 0 0 12px rgba(120, 80, 255, 0.03) !important;
+    animation: none !important;
+  }
+
+  /* Remove any broken border animation */
+  .avatar-wrap::before,
+  .avatar-wrap::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  /* HERO padding */
+  .hero {
+    padding-top: 4.5rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-links a {
+    font-size: 0.45rem !important;
+    padding: 0.2rem 0.25rem !important;
+  }
+}
+
+
+/* ── MOBILE AVATAR FIX ── */
+@media (max-width: 600px) {
+  .avatar-wrap {
+    width: 160px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    padding: 2px !important;
+  }
+  .avatar-img {
+    min-height: unset !important;
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  .avatar-wrap > .avatar-img {
+    border-radius: 50% !important;
+  }
+
+  /* Hero layout — center everything */
+  .hero-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .hero-left, .hero-right {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .hero-left {
+    max-width: 200px !important;
+    margin: 0 auto !important;
+  }
+}
