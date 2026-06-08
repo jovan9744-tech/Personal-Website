@@ -2824,3 +2824,114 @@ html::before {
   flex-wrap: wrap;
   margin-top: 0.25rem;
 }
+
+
+/* ════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES
+════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+
+  /* 1. NAVBAR — shrink pill to fit screen */
+  #navbar {
+    top: 0.75rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 2rem) !important;
+    max-width: 400px !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 999px !important;
+  }
+  .nav-links {
+    display: flex !important;
+    gap: 0 !important;
+  }
+  .nav-links a {
+    font-size: 0.6rem !important;
+    padding: 0.3rem 0.5rem !important;
+    letter-spacing: 0.06em !important;
+  }
+  .nav-logo { display: none !important; }
+  .nav-socials { display: none !important; }
+
+  /* 2. EDU TABS — prevent text cutoff */
+  .edu-tabs {
+    justify-content: center !important;
+    gap: 0 !important;
+    overflow: visible !important;
+  }
+  .edu-tab {
+    font-size: 0.75rem !important;
+    padding: 0.75rem 1.25rem !important;
+    letter-spacing: 0.1em !important;
+  }
+  .edu-tab.active {
+    font-size: 0.88rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* 3. EXP-ITEM — stack vertically on mobile */
+  .exp-item {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    padding: 1.5rem !important;
+  }
+  .exp-right--with-img {
+    grid-template-columns: 1fr !important;
+  }
+  .exp-img-block {
+    max-width: 100% !important;
+  }
+
+  /* 4. FIX empty space above contact */
+  .projects-section {
+    padding-bottom: 3rem !important;
+  }
+  .contact-section {
+    padding-top: 3rem !important;
+  }
+
+  /* 5. HERO adjustments */
+  .hero {
+    padding: 5rem 1.25rem 3rem !important;
+  }
+  .hero-headline {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
+  }
+  .avatar-img {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  /* 6. Section padding */
+  .container {
+    padding: 0 1.25rem !important;
+  }
+  .about-section,
+  .experience-section,
+  .edu-section,
+  .projects-section,
+  .contact-section {
+    padding: 3rem 0 !important;
+  }
+
+  /* 7. Contact grid */
+  .contact-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .contact-right {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-links a {
+    font-size: 0.55rem !important;
+    padding: 0.3rem 0.4rem !important;
+  }
+  .edu-tab {
+    font-size: 0.68rem !important;
+    padding: 0.65rem 1rem !important;
+  }
+}
