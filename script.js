@@ -1,8 +1,4 @@
-// ===========================
-// SCRIPT.JS — Jovan Liem Portfolio
-// ===========================
-
-// ── 1. CUSTOM CURSOR ──────────────────────────────────
+// CUSTOM CURSOR
 const dot  = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
 let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
@@ -27,14 +23,14 @@ document.querySelectorAll('a, button, .proj-card, .cert-card, .avatar-img, .hero
 });
 
 
-// ── 2. NAVBAR ─────────────────────────────────────────
+// NAVBAR
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
 });
 
 
-// ── 3. REVEAL ON SCROLL ───────────────────────────────
+// REVEAL ON SCROLL
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -49,7 +45,7 @@ const revealObs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 
-// ── SCROLL PROGRESS INDICATOR ─────────────────────────
+// SCROLL PROGRESS INDICATOR 
 const siFill = document.getElementById('si-fill');
 if (siFill) {
   window.addEventListener('scroll', () => {
@@ -60,7 +56,7 @@ if (siFill) {
   });
 }
 
-// ── 4. ACTIVE NAV HIGHLIGHT ───────────────────────────
+// ACTIVE NAV HIGHLIGHT
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -83,7 +79,6 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => navObserver.observe(sec));
 
-// Fallback: if near bottom of page, activate last section (contact)
 window.addEventListener('scroll', () => {
   const scrollBottom = window.scrollY + window.innerHeight;
   const docHeight = document.documentElement.scrollHeight;
@@ -94,7 +89,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ── 5. SLIDERS ────────────────────────────────────────
+// SLIDERS
 function initSlider(slider, slidesSelector, dotsSelector, prevSelector, nextSelector) {
   const slidesWrap = slider.querySelector(slidesSelector);
   const dotsWrap   = slider.querySelector(dotsSelector);
@@ -134,7 +129,7 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
   initSlider(slider, '.lead-slides', '.slider-dots', '.slider-prev', '.slider-next');
 });
 
-// ── 6. LIGHTBOX — with prev/next navigation ────────────
+// LIGHTBOX
 const lb = document.createElement('div');
 lb.id = 'lightbox';
 lb.innerHTML = `
@@ -165,7 +160,7 @@ lb.innerHTML = `
 `;
 document.body.appendChild(lb);
 
-// Gallery state — holds all images in the current "group"
+// Gallery state
 let lbGallery  = [];  // array of { src, downloadSrc }
 let lbIndex    = 0;
 let lbScale    = 1;
@@ -236,10 +231,7 @@ async function lbDownload(src) {
   }
 }
 
-// ── Build galleries ─────────────────────────────────
-// Each slider group = one gallery. Cert cards share no group (single images).
-
-// Leadership sliders — each slider is its own gallery
+// Leadership sliders
 document.querySelectorAll('[data-slider]').forEach(slider => {
   const imgs = Array.from(slider.querySelectorAll('.lead-slide img'));
   const gallery = imgs.map(img => ({ src: img.src, downloadSrc: img.closest('.lead-slide').querySelector('.slide-dl-btn')?.dataset.src || img.src }));
@@ -249,7 +241,7 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
   });
 });
 
-// Cert cards — each is its own single-image gallery
+// Cert cards
 document.querySelectorAll('.cert-card').forEach(card => {
   card.addEventListener('click', (e) => {
     if (e.target.closest('.cert-action-btn')) return;
@@ -262,12 +254,12 @@ document.querySelectorAll('.cert-card').forEach(card => {
 const avatarImg = document.querySelector('.avatar-img');
 if (avatarImg) avatarImg.addEventListener('click', () => lbOpen([{ src: avatarImg.src, downloadSrc: avatarImg.src }], 0));
 
-// Download buttons in sliders (separate from lightbox download btn)
+// Download buttons in sliders
 document.querySelectorAll('.slide-dl-btn').forEach(btn => {
   btn.addEventListener('click', (e) => { e.stopPropagation(); lbDownload(btn.dataset.src); });
 });
 
-// ── Toolbar & nav events ────────────────────────────
+// Toolbar & nav events
 document.getElementById('lb-prev').addEventListener('click', (e) => { e.stopPropagation(); lbGoTo(lbIndex - 1); });
 document.getElementById('lb-next').addEventListener('click', (e) => { e.stopPropagation(); lbGoTo(lbIndex + 1); });
 document.getElementById('lb-zoom-in').addEventListener('click',  (e) => { e.stopPropagation(); lbZoom(0.3); });
@@ -295,7 +287,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-// ── 7. SMOOTH SCROLL ──────────────────────────────────
+// 7. SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -304,15 +296,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 
-// ── 8. PAGE LOAD FADE ─────────────────────────────────
+// 8. PAGE LOAD FADE 
 window.addEventListener('load', () => {
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.6s ease';
   requestAnimationFrame(() => { document.body.style.opacity = '1'; });
 });
 
-// ── EDU TABS ──────────────────────────────────────────
-// ── TAB SWITCHER: grow first → then slide panel ───────
+// EDU TABS
 const eduTabs   = document.querySelectorAll('.edu-tab');
 const eduTabsEl = document.querySelector('.edu-tabs');
 const TAB_GROW_DURATION = 420; // ms — matches CSS transition 0.45s
@@ -325,7 +316,7 @@ function moveIndicator(activeTab) {
     bar.className = 'edu-tab-bar';
     eduTabsEl.appendChild(bar);
   }
-  // Use requestAnimationFrame so layout is settled after class changes
+
   requestAnimationFrame(() => {
     const tabRect  = activeTab.getBoundingClientRect();
     const wrapRect = eduTabsEl.getBoundingClientRect();
@@ -348,12 +339,10 @@ eduTabs.forEach(tab => {
     const nextIdx    = tabOrder.indexOf(tab);
     const goingRight = nextIdx > currentIdx; // Education(0)→Experience(1) = right
 
-    // STEP 1: Grow the clicked tab first
     eduTabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     moveIndicator(tab);
 
-    // STEP 2: After grow animation finishes, slide the panel in
     setTimeout(() => {
       document.querySelectorAll('.edu-panel').forEach(p => {
         p.classList.remove('active', 'slide-left', 'slide-right');
@@ -362,8 +351,6 @@ eduTabs.forEach(tab => {
       const panel = document.getElementById('panel-' + target);
       if (panel) {
         panel.classList.add('active');
-        // Education clicked → content comes from LEFT (slide-right animation)
-        // Experience clicked → content comes from RIGHT (slide-left animation)
         panel.classList.add(goingRight ? 'slide-left' : 'slide-right');
       }
 
@@ -372,7 +359,6 @@ eduTabs.forEach(tab => {
   });
 });
 
-// Init indicator on load
 window.addEventListener('load', () => {
   const activeTab = document.querySelector('.edu-tab.active');
   if (activeTab) {
@@ -380,17 +366,14 @@ window.addEventListener('load', () => {
   }
 });
 
-// ── LEADERSHIP ACCORDION ──────────────────────────────
+// LEADERSHIP ACCORDION
 document.querySelectorAll('[data-acc]').forEach(acc => {
   const header  = acc.querySelector('.lead-acc-header');
   header.addEventListener('click', () => {
     const isOpen = acc.classList.contains('open');
-    // Close all
     document.querySelectorAll('[data-acc].open').forEach(a => a.classList.remove('open'));
-    // Open clicked if it was closed
     if (!isOpen) {
       acc.classList.add('open');
-      // Init any slider inside that hasn't been inited yet
       acc.querySelectorAll('[data-slider]:not([data-slider-init])').forEach(slider => {
         slider.setAttribute('data-slider-init', '1');
         initGallerySlider(slider);
@@ -399,7 +382,7 @@ document.querySelectorAll('[data-acc]').forEach(acc => {
   });
 });
 
-// ── GALLERY SLIDER (translateX, simple) ───────────────
+// GALLERY SLIDER
 function initGallerySlider(slider) {
   const slidesWrap = slider.querySelector('.lead-slides');
   const dotsWrap   = slider.querySelector('.slider-dots');
@@ -437,7 +420,6 @@ function initGallerySlider(slider) {
   });
 }
 
-// ── CERT-CARD-V2 LIGHTBOX ─────────────────────────────
 document.querySelectorAll('.cert-card-v2').forEach(card => {
   card.addEventListener('click', e => {
     if (e.target.closest('.cert-card-v2-dl')) return;
@@ -446,7 +428,6 @@ document.querySelectorAll('.cert-card-v2').forEach(card => {
   });
 });
 
-// ── CERT-EXP-ITEM LIGHTBOX (Certifications section) ───
 document.querySelectorAll('.cert-exp-item').forEach(item => {
   const imgWrap = item.querySelector('.cert-exp-img-wrap');
   if (!imgWrap) return;
@@ -458,11 +439,7 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   });
 });
 
-// ══════════════════════════════════════════
 // INTERACTIVE EFFECTS
-// ══════════════════════════════════════════
-
-// ── 1. TYPING ANIMATION — re-triggers on hero visit ────
 (function() {
   const el = document.querySelector('.hero-tags');
   const hero = document.getElementById('home');
@@ -495,7 +472,6 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
     }, 55);
   }
 
-  // Re-trigger every time hero enters viewport
   const heroObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) startTyping();
@@ -503,11 +479,11 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   }, { threshold: 0.4 });
 
   heroObs.observe(hero);
-  startTyping(); // also run on first load
+  startTyping();
 })();
 
 
-// ── 2. NUMBER COUNTER — smooth white, re-triggers ──────
+// NUMBER COUNTER
 (function() {
   const counters = document.querySelectorAll('.meta-num[data-count]');
   if (!counters.length) return;
@@ -560,12 +536,12 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
 })();
 
 
-// ── 3. TILT EFFECT — featured project card ─
+// TILT EFFECT
 (function() {
   const card = document.querySelector('.proj-card--featured');
   if (!card) return;
 
-  const MAX = 8; // max tilt degrees
+  const MAX = 8;
 
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
@@ -583,12 +559,7 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   });
 })();
 
-
-// ── 4. IMAGE ZOOM — handled via CSS hover ──
-// (already done in CSS: .exp-img-block:hover .lead-slide img { transform: scale(1.06) })
-
-
-// ── 5. CURSOR "VIEW" label on images ───────
+// CURSOR "VIEW"
 (function() {
   const ring      = document.getElementById('cursorRing');
   const viewLabel = document.getElementById('cursorViewLabel');
@@ -603,7 +574,6 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
     viewLabel.style.top  = labelY + 'px';
   });
 
-  // All images inside sliders
   const images = document.querySelectorAll(
     '.exp-img-block .lead-slide img, .lead-gallery .lead-slide img, .cert-card-v2 img, .avatar-img'
   );
@@ -620,11 +590,7 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   });
 })();
 
-// ══════════════════════════════════════════
-// DESIGN EFFECTS — BATCH 2
-// ══════════════════════════════════════════
-
-// ── 1. FLOATING PARTICLES — full page ─────
+// FLOATING PARTICLES
 (function() {
   const container = document.getElementById('globalParticles');
   if (!container) return;
@@ -656,8 +622,6 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   }
 })();
 
-
-// ── 2. SECTION-AWARE SCROLL LABEL ─────────
 (function() {
   const label = document.getElementById('si-label');
   if (!label) return;
@@ -689,14 +653,6 @@ document.querySelectorAll('.cert-exp-item').forEach(item => {
   window.addEventListener('scroll', updateLabel, { passive: true });
   updateLabel();
 })();
-
-
-// ── 3. SECTION WAVE DIVIDERS ─────────────
-// Handled purely in CSS via .section-wave::after
-
-
-// ── 4. NAV UNDERLINE ─────────────────────
-// Handled purely in CSS via .nav-links a::after animation
 
 // ── HERO ANIMATED TAGLINE ────────────────────────────
 (function() {
